@@ -1,15 +1,15 @@
-##### TooLQit
+# TooLQit
 
-TooLQit is a LQ toolkit which contains leading order (LO) FeynRules models of all possible scalar and vector leptoquark models. We provide the LQ models in the form of 
+TooLQit is a LQ toolkit which contains leading order (LO) FeynRules models of all possible scalar and vector leptoquark (LQ) models. We provide the LQ models in the form of 
 Universal FeynRules Output (UFO) files suitable for simulating in MadGraph5. In addition to this, we also provide the .fr files and the mathematica notebooks UFO files.
 
-# CaLQ
-
-#### _LHC Dileption Limits Calculator_
-Version 1.0.0
+# CaLQ Version 1.0.0
 
 ## Introduction
-This is a dilepton limits calculator. It supports the U1 & S1 leptoquark models. The calculator can be used in two modes: [interactive](#interactive-mode) and [non-interactive](#non-interactive-mode) to find limits for leptoquark couplings.
+CaLQ is a python based LHC limits calculator. It estimates the indirect limits on the LQ parameters (LQ-quark-lepton coupling and mass of LQ) using the chi-square test. 
+In the current version, the CaLQ supports the U1 and S1 LQ models. The indirect limits are obtained by the recasting the current LHC dilepton search data
+in terms of the LQ model parameters. We provide the theory and a detailed implementation of the method in
+this [paper](https://www.hepdata.net/record/ins1782650). 
 
 Theory and implementation details can be found in this [paper]. LHC data is taken from [here](https://www.hepdata.net/record/ins1782650).
 
