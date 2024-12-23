@@ -1,3 +1,8 @@
+##### TooLQit
+
+TooLQit is a LQ toolkit which contains leading order (LO) FeynRules models of all possible scalar and vector leptoquark models. We provide the LQ models in the form of 
+Universal FeynRules Output (UFO) files suitable for simulating in MadGraph5. In addition to this, we also provide the .fr files and the mathematica notebooks UFO files.
+
 # CaLQ
 
 #### _LHC Dileption Limits Calculator_
