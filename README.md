@@ -40,10 +40,6 @@ calq > mass = 1234
 calq > couplings = X10LL[1,2] X10LL[2,2]
 calq > initiate
 ```
-Once initiated the calculator will compute and display the chi-square minima for the given mass and coupling.
-This will be followed by a prompt where the user can enter a coupling(s) of their choice to check whether
-it is allowed or not.
-
 The list of valid commands are:
 
 - `import_model` to specify which leptoquark model to use.
@@ -57,11 +53,14 @@ The list of valid commands are:
 - `help` displays the list of commands available.
 - `initiate` will compute the chi-square polynomial and its minima corresponding to the current values of input parameters.
 
-Once initiated, the calculator goes to input values accepting mode and the prompt changes to ` > `. This prompt will only accept queries of the `<f1> <f2> ... <fn>`, where _\<f1\>_ to _\<fn\>_ are floating point numbers, _n_ is the number of couplings in the parameters and the values are space separated. The expected order of couplings (which is the same as the input order) is mentioned after initiating.
+Once initiated, the calculator goes to input values accepting mode and the prompt changes to ` > `. 
+This prompt will only accept queries of the `<f1> <f2> ... <fn>`, where _\<f1\>_ to _\<fn\>_ are floating point numbers, 
+n_ is the number of couplings in the parameters and the values are space separated. 
+The expected order of couplings (which is the same as the input order) is mentioned after initiating.
 
-Corresponding to every query, the delta chi-square value will be displayed. Whether this is allowed withing the {1,2} sigma limit is also displayed.
+Corresponding to every query, the delta chi-square value will be displayed. Whether this is allowed within the {1,2} sigma limit is also displayed.
 
-Type `done` to exit query mode. An example query after executing the above commands would be:
+Type `d, q, quit, exit` to exit query mode. An example query after executing the above commands would be:
 ```
  > 0.1 0
  > 0.37 0.0001
