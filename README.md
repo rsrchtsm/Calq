@@ -87,4 +87,4 @@ Options:
 
 ## Caveats
 
-The calculator is in its version 1.0.0 and will undergo extensive testing. Currently only U1 & S1 leptoquark models are used, more leptoquark models will be added later. Any comments regarding the calculator can be emailed to [us](mailto:atirek.kumar@research.iiit.ac.in).
+The calculator is in its version 1.0.0 and will undergo extensive testing. Currently only U1 & S1 leptoquark models are used, more leptoquark models will be added later. Any comments regarding the calculator can be emailed to [us](mailto:arvind.bhaskar@iopb.res.in;subhadip.mitra@iiit.ac.in).
