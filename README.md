@@ -8,19 +8,23 @@ Universal FeynRules Output (UFO) files suitable for simulating in MadGraph5. In 
 ## Introduction
 CaLQ is a python based LHC limits calculator. It estimates the indirect limits on the LQ parameters (LQ-quark-lepton coupling and mass of LQ) using the chi-square test. 
 In the current version, the CaLQ supports the U1 and S1 LQ models. The indirect limits are obtained by the recasting the current LHC dilepton search data
-in terms of the LQ model parameters. We provide the theory and a detailed implementation of the method in
-this [paper](https://www.hepdata.net/record/ins1782650). 
-
-Theory and implementation details can be found in this [paper]. LHC data is taken from [here](https://www.hepdata.net/record/ins1782650).
+in terms of the LQ model parameters. The LHC dilepton search data can be found in the following papers, 
+[ditau](https://www.hepdata.net/record/ins1782650) and [dielectron and dimuon](https://www.hepdata.net/record/ins1849964). 
+We provide the theory and a detailed implementation of the method in this [paper](https://www.hepdata.net/record/ins1782650). 
 
 ## Setting Up
-The calculator is written in python3 and only needs the packages mentioned in _requirements.txt_. To install those, set up a virtual environment & install the dependencies.
+The calculator is written in python3 and we have mentioned the required packages in _requirements.txt_. One can install those by setting up a
+virtual environment and installing the dependencies. 
 ```sh
-cd <calq-direcory>
+cd <calq-directory>
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
+
+The CaLQ is available in two modes: 
+1) [interactive mode](#interactive-mode)
+2) [non-interactive mode](#non-interactive-mode)
 
 ## Interactive Mode
 
@@ -28,29 +32,28 @@ To use the calculator in interactive mode,
 ```sh
 python3 calq.py
 ```
-You will be greeted with CaLQ banner and a list of available commands. The prompt will be `calq > `. Example commands include:
+You will be greeted with CaLQ banner and a list of available commands, a list of available couplings and the default values. 
+The prompt will be `calq > `. Enter the following commands to initiate the calculator
 ```
 calq > import_model = U1
 calq > mass = 1234
-calq > couplings = LM23L LM33R
-calq > significance = 1
-calq > ignore_single_pair = no
-calq > systematic_error = 0.1
-calq > status
-calq > help
+calq > couplings = X10LL[1,2] X10LL[2,2]
 calq > initiate
 ```
+Once initiated the calculator will compute and display the chi-square minima for the given mass and coupling.
+This will be followed by a prompt where the user can enter a coupling(s) of their choice to check whether
+it is allowed or not.
+
 The list of valid commands are:
 
 - `import_model` to specify which leptoquark model to use.
-- `mass` should be an integer between 1000 and 3000 (inclusive).
-- `couplings` should list couplings in the format _LMxyL_ or _LMxyR_ where _x_ is the quark number and _y_ is the lepton number and the last _L_ or _R_ denote left or right handedness respectively.
-- `significance` takes values 1 or 2.
-- `extra_width` take any positive value. In case of an additional
-decay mode, you can input extra width
-- `ignore_single_pair` takes values _yes_ or _no_. Input _yes_ means that the single and pair productions will be ignored and this will speed up calculations.
-- `systematic_error` denotes the systematic error margin. Default is 10%.
-- `status` displayes the current values of input parameters.
+- `mass` should be an integer between 1000 and 5000 (inclusive).
+- `couplings` should enter the couplings in the following way X10LL/RR[i,j] for U1 and Y10LL/RR[i,j] for S1.
+- `significance` should enter the value 1 or 2.
+- `extra_width` should enter any positive real number, incase of any additional decay width of LQ.
+- `ignore_single_pair` should enter _yes_ or _no_. _yes_ means that the single and pair productions will be ignored and this will speed up calculations. The default value is no.
+- `systematic_error` denotes the systematic error margin. The default value is 10%.
+- `status` displays the current values of input parameters.
 - `help` displays the list of commands available.
 - `initiate` will compute the chi-square polynomial and its minima corresponding to the current values of input parameters.
 
